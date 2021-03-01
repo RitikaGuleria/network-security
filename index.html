@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            Networking and Security
+           
+        </title>
+        <style>
+	        	body{
+                   
+	        		margin: 0;
+	        		color: #222;
+	        		font-family: sans-serif;
+	        	}
+            img{
+                max-width: 100%;
+                display: block;
+                margin: auto;
+            }
+            .wrapper{
+            	padding: 1rem;
+            	max-width: 720px;
+            	margin: auto;
+            }
+            .social{
+            	display: flex;
+            	flex-wrap: wrap;
+            	justify-content: center;
+            	align-items: baseline;
+            }
+            .social-icon-container{
+            	padding: 0.5rem;
+            	margin: 0.5rem;
+            	max-width: 2rem;
+            	display: flex;
+            	flex-direction: column;
+            	align-items: center;
+            }
+            .social-icon-container:hover{
+            	fill: #666;
+            	text-decoration: none;
+            }
+        </style>
+    </head>
+        
+    <body>
+        <div class="wrapper">
+        	<h1><p style="text-align: center;">NETWORKING AND SECURITY</p></h1>
+
+            
+        <section>
+            <h2> Networking </h2>
+        <p>
+            A computer network is a system in which multiple computers are connected to each other to share information and resources. Computer networks can be categorized in several different ways.<br> For example, typically span a single home, school, or small office building come under LAN, whereas wide area networks (WANs), reach across cities, states, or even across the world. The internet is the world's largest public WAN.
+        </p>
+        <section>
+            <p><img src="./images/networking.png" ></p>
+        </section>
+        <h5>Prerequisite- It's important to understand OSI model.</h5>
+        
+        </section>
+       
+        <section>
+        <h2>OSI Model </h2>
+        <p>
+        OSI stands for Open Systems Interconnection. It is a 7 layer architecture with each layer having specific functionality to perform. All these 7 layers work collaboratively to transmit the data from one host to another across the globe.
+        </p>
+        </section>
+        <section>
+            <p><img src="./images/osii.png"></p>
+            <p>Let's see below to know more about how data or packets are transmitted from one layer to other layer?</p>
+            <p><img src="./images/ooosi.png"></p>
+        </section>
+        <section>
+        <h3>
+            1) Physical Layer
+        </h3>
+        <p>
+            The lowest layer of the OSI reference model is the physical layer. It is responsible for the actual physical connection between the devices.<br> The physical layer contains information in the form of bits. It is responsible for transmitting individual bits from one node to the next. When receiving data, this layer will get the signal received and convert it into 0s and 1s and send them to the Data Link layer, which will put the frame back together. Hub, Repeater, Modem, Cables are Physical Layer devices.
+        </p>
+        <h3>
+            2) Data Link Layer
+        </h3>
+        <p>
+            
+            The data link layer is responsible for the node to node delivery of the message. The main function of this layer is to make sure data transfer is error-free from one node to another, over the physical layer. When a packet arrives in a network, it is the responsibility of DLL to transmit it to the Host using its MAC address. Data Link Layer is divided into two sub layers :
+
+            <li>Logical Link Control (LLC)</li>
+            <li>Media Access Control (MAC)</li>
+            
+        </p>
+        <p>
+            Framing, Error Control, Physical Addressing, Flow control, Access control are functions of DDL. Switches and bridges are devices of DDL.
+        </p>
+        <h3>
+            3) Network Layer
+        </h3>
+        <p>
+            Network layer works for the transmission of data from one host to the other located in different networks. It also takes care of packet routing i.e. selection of the shortest path to transmit the packet, from the number of routes available. The sender & receiver’s IP address are placed in the header by the network layer. The functions of the Network layer are :
+        </p>
+        <li>
+           Routing: The network layer protocols determine which route is suitable from source to destination. This function of network layer is known as routing.
+        </li>
+        <li>
+            Logical Addressing: In order to identify each device on internetwork uniquely, network layer defines an addressing scheme. The sender & receiver’s IP address are placed in the header by network layer. Such an address distinguishes each device uniquely and universally.
+        </li>
+        <p>
+            Segment in network layer is referred as Packet.Network layer is implemented by networking devices such as routers.
+        </p>
+        <h3>
+            4) Transport Layer
+        </h3>
+        <p>
+            Transport layer provides services to application layer and takes services from network layer. The data in the transport layer is referred to as Segments. It is responsible for the End to End Delivery of the complete message.<br> The transport layer also provides the acknowledgement of the successful data transmission and re-transmits the data if an error is found. Data in the Transport Layer is called as Segments.<br> Transport layer is operated by the Operating System. It is a part of the OS and communicates with the Application Layer by making system calls. Transport Layer is called as Heart of OSI model.
+        </p>
+        <h3>
+            5) Session Layer
+        </h3>
+        <p>
+            This layer is responsible for establishment of connection, maintenance of sessions, authentication and also ensures security.
+            The functions of the session layer are : session establishment, maintenance and termination etc.
+        </p>
+        <h3>
+            6) Presentation Layer
+        </h3>     
+        <p>
+            Presentation layer is also called the Translation layer.The data from the application layer is extracted here and manipulated as per the required format to transmit over the network. The functions of the presentation layer are :
+<li>
+    Encryption.
+</li>
+<li>
+    Translation : For example, ASCII to EBCDIC.
+</li>
+<li>
+    Compression.
+</li>
+        </p>
+        <h3>
+            7) Application Layer
+        </h3>
+        <p>
+            This layer is also known as the desktop Layer. The application layer is the top-most layer of OSI model.<br> This layer will communicate with the end users & user applications. It provides services directly to user applications. It enables to access the network.<br> It provides user interfaces and support for services such as email, remote file access and transfer, shared database management and other types of distributed information services.<br> At the very top of the OSI Reference Model stack of layers, we find Application layer which is implemented by the network applications. These applications produce the data, which has to be transferred over the network. This layer also serves as a window for the application services to access the network and for displaying the received information to the user.
+        </p>
+       <li>
+            Application- Browsers,Skype Messenger etc.
+       </li>
+       <hr>
+        </section>
+        <section>
+            <h2>
+                <p>IP Address</p>
+            </h2>
+            <p>
+                An IP address, or simply an "IP," is a unique address that identifies a device on the Internet or a local network. It allows a system to be recognized by other systems connected via the Internet protocol. IP address is an address having information about how to reach a specific host, especially outside the LAN. 
+            </p>
+            <p>
+                IP address are as much as important as a person's unique identification card or number. It helps in connecting our computer to other devices on your network and all over the world. IP addresses allow computers and devices to communicate with each other over the internet. It assurs security for your own benefits and promotes etc. Without ip address we'll never be able to send or receive any info.       
+            </p>
+            
+                    <img src="./images/vanshika.jpg">
+             
+            <h3>There are two primary types of IP address formats used today — IPv4 and IPv6.</h3>
+          <h3>IPv4</h3> 
+          <p>Internet Protocol version 4, generally referred to as IPv4. An IPv4 address comprises four numbers, each ranging from 0 to 255, which are separated by periods. IPv4 is 32 bit binary number. For example, Avast’s IP address is 5.62.42.77. 
+        </p>
+          <h3>IPv6</h3>
+            <p style="overflow-x: auto;"> Internet Protocol version 6, grenerally referred to as IPv6. An IPv6 address consists of eight groups of four hexadecimal digits. For instance- 3001:0da8:75a3:0000:0000:8a2e:0370:7334 .</p>
+          
+        </section>
+          <section>
+              <p><img src="./images/comparing-the-differences-of-IPv4-and-IPv6.png" ></section></p>
+          </section>
+          <section>
+          <h3>Private and Public IP</h3>
+          
+         
+            <h4>Private IP: </h4> 
+            <p>Private ip address of a system is the IP address which is used to communicate within the same network. Using private IP data or information can be sent or received within the same network. It is used within the LAN. Assigned by user/admin. It can be view and edit.
+            </p>
+           <h4>Public IP: </h4>
+        <p>Public IP address of a system is the IP address which is used to communicate outside the network. Public IP address is basically assigned by the ISP (Internet Service Provider). It is used outside the LAN. We can view them but can't edit.
+        </p>
+            
+            <p><img src="./public/private_ip.png"></p>
+        </section>
+          <section>
+                <h2>NAT </h2>
+               <p> NAT stands for Network Address Translation. NAT is the process of converting public IP into private IP and vice-versa. Router is responsible for this conversion in background.</p>
+          <hr>
+                   
+                
+                    <h2>NID and BID</h2>
+                    <p>Before understanding Classes and Subnetting, it's necessary to understand the concept of NID and BID.</p>
+                    <p>
+                        <h4>NID(Network id): </h4><p>Network id is a unique id for recoganisation of the host/user in the network. NID represents whole network. It is a particular id which is given to an individual network. It can't be assigned to any individual device. It is always 192.168.1.0 .        
+                    <h4>BID(Broadcast id):</h4><p>Broadcast address is the address where a source will send the information to all the host connected to the single network.It is always 192.168.1.1 .</p>
+                    </p>
+               <h2>Subnetting and Classes </h2><p>Subnetting- Dividing the network into smaller contiguous networks or subnets is called subnetting.Computer networks can be broken into many networks or small networks can be combined to form large networks depending upon our needs. This is done by IP subnetting and supernetting. </p>
+            
+            <p>
+                <p><img src="./images/classes.png"></p>
+            </p>
+            <hr>
+            </section>
+
+            <section>
+                <h1>Router</h1>
+                <p>
+                    Router is a networking device that forwards data packets between computer network.</br>
+                    Routing: It is used to find the best possible way or path to send or receive the packets.</p>
+                <p> Let us understand this by a very general example, suppose we search for www.google.com in our web browser then this will be a request which will be sent from our system to the google`s server to serve that webpage, now our request which is nothing but a stream of packets don`t just go the google`s server straightaway they go through a series of networking devices known as router which accepts this packets and forwards them to correct path and hence it reaches to the destination server.
+                </p>
+               <p><img src="./images/router.png"></p>
+           
+                <h4>Concepts which come under router: </h4> 
+                
+                
+                <h3>
+                    1) Router ports:
+                </h3>
+                <h4>a) Interface port: </h4>
+                <p>It is used to connect router with other devices like switch, Router, PC etc. Ethernet interface, FastEthernet interface, GigabitEthernet interface, Serial interface are types of it.</p>
+                
+                
+                <h4>
+                    b) Line port: 
+               </h4>
+               <p>It is used to configure the router. Console port and auxilary port are types of it.</p>
+            </p>
+       
+                <h3>
+                    2) Router rules: 
+                </h3>
+                <li>
+                    All interfaces of a router should be in different network or should have different NID.
+                </li>
+                <li>
+                    A serial interface connecting two router should be in same network.
+                </li>
+                <h3>
+                    3) Router modes:
+                </h3>
+                <li>
+                    User mode.
+                </li>
+                <li>
+                    Privilege mode.
+                </li>
+                <li>
+                    Global configuration.
+                </li>
+                <h3>
+                    4) Router configuration
+                </h3>
+                <p><img src="./images/routerr.png"></p>
+            
+           <h3>There are two types of router :</h3>
+        
+            <h3>1) Static Router: </h3><p>Static Routing is the process in which static routes are manually added to the routing table. We will add unknown NID in ip table.</p>
+           <li>Hopping concept is used in it. We add HOP during configuration of a router. We'll use table here which contains NID and HOP for static routing. We make table for each network.</li>
+       
+               <p><img src="./images/STATIC_ROUTING.PNG"></p>
+               <p><img src="./images/static_router.png"></p>
+                <h3>
+                    2) Dynamic Router: </h3><p>This is opposite to the typical traditional static network routing. We will add known NID in ip table. Dynamic Router messages also share the information with different routers, that make use of the very same protocol.Dynamic routing is considered easy to configure on large networks and also it is more intuitive than static routing at a selection of the best route, detection of the route changes and also a discovery of the remote networks.
+            </p>
+            <h4>
+                   a) Distance Vector Protocol(RIP: Routing Information Protocol)-
+                </h4>
+                <p>HOP should be minimum.</P>
+               <h4>
+                   b) Link State Protocol(OSPF: Open Shortest Path First)-
+                </h4><p> Bandwidth should be maximum.</p>
+                <h4>
+                   c) Advance Distance Vector Protocol(EIGRP: Enhanced Interior Gateway Protocol)-
+                </h4> 
+                <p> It consider bandwidth, delay time and travel time to find out the best possible path. It uses autonomous number and their range between 0-65535. It should be same for all routers of a particular area. It uses BGP i.e. Border Gateway Protocol to connect or establish connection between two or more different cities having different autonomous number. </p>      
+            <p><img src="./images/dynamic.PNG"></p>
+        </section>
+            <hr>
+            <section>
+                <h1>Switch</h1>
+                <li>A network switch is a device that centralizes communications among several connected devices in one LAN.</li>
+                <li>A switch determines the source and destination addresses of each packet and forwards data only to the specific devices.</li>
+                <li>Switch has memory which stores MAC address.</li>
+                <p><img src="./images/switccchhhhhhhhhh.png"></p>
+                <h3>Concepts which comes under switch:</h3>
+                <h4>1) Switch ports.</h4>
+                <li>Access Port: This port is used to connect switch to pc.</li>
+                    <li>Trunk Port: This port is used to switch to switch.
+                    </li>
+                <h4>2) Switch mode: These modes are similar to router.</h4>
+                    	<li>User Mode.</li>
+                    	<li>Privilege Mode.</li>
+                    <li>Global Configuration Mode.</li>	
+                    
+                <h4>3) Switch configuration.</h4>
+                <h4>CLI:</h4>
+                <li>SWITCH>EN</li>
+                 <li> SWITCH#CONF T</li>  
+                    <li>SWITCH(CONFIG)# INTERFACE FASTETHERNET0/2</li>
+                   <li> SWITCH(CONFIG)# SWITCHPORT MODE ACCESS (OR TRUNK) </li>
+                <li>   SWITCH(CONFIG)#EXIT</li>
+                    <hr> 
+            </section>
+            <SECTION>
+                <H2>
+                    VLAN
+                </H2>
+                <li>It stands for Virtual Local Area Network.</li>
+                <li>
+                    A VLAN (virtual LAN) is a subnetwork which can group together collections of devices on separate physical local area networks (LANs). A LAN is a group of computers and devices that share a communications line or wireless link to a server within the same geographical area.
+                </li>
+                <li>
+                    Working of VLAN is same as subnetting but the difference is that subnetting is time consuming process as well as it increases workload.
+                </li>
+                <li>
+                     To check whether we have added interfaces successfully or not, go with command > show vlan.
+                </li>
+             
+                  <h3>VLAN Configuration Steps:</h3>  
+
+<li>Create VLAN Number (0-65535).</li>		<li>Create VLAN Name (SALES , HR).</li>
+<li>	Choose an interface of switch.</li>
+<li>	Configure interface (ACCESS / TRUNK).</li>
+<li>	Link interface with VLAN.</li>
+<h4>Implementation on CLI:</h4>
+<h4>STEP 1:</h4>
+<p>SWITCH>EN</p>
+<p>SWITCH#CONF T</p>
+<p>SWITCH(CONFIG)#VLAN 10</p>
+<p>SWITCH(CONFIG-VLAN)#NAME SALES</p>
+<p>SWITCH(CONFIG-VLAN)#EXIT</p>
+
+<h4>STEP 2:</h4>
+<p>SWITCH(CONFIG)# INTERFACE FASTETHERNET0/2.</p>
+
+<h4>STEP 3:</h4>
+<p>SWITCH(CONFIG-IF)# SWITCHPORT MODE ACCESS.</p>
+
+<h4>STEP 4:</h4>
+<p>SWITCH(CONFIG-IF)# SWITCHPORT ACCESS VLAN 10.</p>
+<img src="./images/s1.png">
+<img src="./images/s.PNG">
+<hr>
+<h2>ACL(Access Control List) </h2>
+<p> 
+    An Access Control List (ACL) is a set of rules that is usually used to filter network traffic. ACLs can be configured on network devices with packet filtering capatibilites, such as routers and firewalls.</p>
+<p>ACLs contains a list of conditions that categorize packets and help us to determine when to allow or deny network traffic. They are applied on the interface basis to packets leaving or entering an interface. Two types of ACLs are available on a Cisco device:</p>
+                </p>
+               <li>Standard access lists – allow us to evaluate only the source IP address of a packet. Standard ACLs are not as powerful as extended access lists, but they are less CPU intensive for the device.</li>
+           <li>Extended access lists – allow us to evaluate the source and destination IP addresses, the type of Layer 3 protocol, source and destination port, and other parameters. Extended ACLs are more complex to configure and require more CPU time than the standard ACLs, but they allow more granular level of control.</li>
+           <p><img src="./images/differe acl s.PNG"></p>
+           
+            <h3>ACL CREATION:</h3>
+            <p>#ACCESS-LIST No. Permit/Deny Protocol Source IP Source WCM Destination IP Destination WCM Operator Port No.</p>
+            <p>EXAMPLE:
+             #ACCESS-LIST 110 DENY TCP 192.168.1.10 0.0.0.0 10.0.0.2 0.0.0.0 EQ 80</p>
+           <p>#ACCESS-LIST 110 PERMIT ICMP ANY ANY
+           </p>
+           <h3>Steps of implementation of ACL in CLI:</h3>
+           <p>ACL IMPLEMENTATION:</p>
+<P>#INTERFACE TYPE No. </P>
+<P> #IP ACCESS-GROUP No. IN/OUT </P>
+<P> EXAMPLE: </P>
+<P> #INTERFACE FASTETHERNET0/0 </P>
+<P> #IP ACCESS-GROUP 110 IN </P>
+<H4>After denying the request, we'll get this result.</H4>
+<p><img src="./images/ACL.PNG"></p>
+<hr>
+<section>
+    <h2>NAT(Network Access Technique)</h2>
+    <p></p>
+    <li>To access the Internet, one public IP address is needed, but we can use a private IP address in our private network. The idea of NAT is to allow multiple devices to access the Internet through a single public address. To achieve this, the translation of private IP address to a public IP address is required.</li>
+    <li>
+        Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts. Also, it does the translation of port numbers i.e. masks the port number of the host with another port number, in the packet that will be routed to the destination. It then makes the corresponding entries of IP address and port number in the NAT table. NAT generally operates on router or firewall.
+    </li>
+    <li>
+
+        NAT operates for router.
+    </li>
+    <li>
+        NAT allows a single device, such as a router, to act as an agent between the Internet (or public network) and a local network (or private network), which means that only a single unique IP address is required to represent an entire group of computers to anything outside their network
+    </li>
+    <p align="left"><img src="./Users\/itika\Desktop\Presentations\Networking\images\\Nat second.png"></p>
+    <p><img src="./images/NAT.png"></p>
+    <hr>
+    <section>
+        <h2>Firewall</h2>
+        <li>A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules.</li>
+        <li>A firewall typically establishes a barrier between a trusted network and an untrusted network, such as the Internet.</li>
+        <p><img src="./images/firewall.jfif"></p>
+        <h4>Types of firewall:</h4>
+        <h4><li>Statefull </li></h4><p>Record every stage from beginning.</p>
+        <li></h4>Stateless </h4></li><p>Only current page is recorded.</p>
+        <h4>Cisco Adaptive Security Appliance(ASA) Firewall :</h4><p> Device that combines firewall, antivirus, intrusion prevention, VPN and SSL capabilities. Choose 5505 Firewall.</p>
+
+            <p>Firewall control traffic using two rules :
+            Inbound, Outbound 
+            </p>
+        <p> <h4>Configuration steps:</h4>
+             <li> We can’t assign IP directly to any interface of a firewall.</li>
+<li>We have to assign IP to VLAN & then link VLAN to any interface so IP ets indirectly assigned to interface.</li>
+<li>INSIDE network is inside your LAN.</li>
+<li>OUTSIDE network will be out of LAN.</li>
+<li>VLAN 1 will always be linked with INSIDE network.</li>
+<li>VLAN 2 will always be linked with OUTSIDE network.</li>
+<li>SECURITY LEVEL of INSIDE network will be 100 & OUTSIDE will be 0.</li>
+<li>Ethernet 0/1 of firewall will be assigned to VLAN1.</li>
+<li>Ethernet 0/0 of firewall will be assigned to VLAN2.</li>
+<p><img src="./images/firewall.png"></p>
+<hr>
+<h3>Network Scanning</h3></p>Network scanning refers to the use of a computer network to gather information regarding computing systems.<br> Network scanning is mainly used for security assessment, system maintenance, and also for performing attacks by attackers. It is the first step while containing information about any network.
+</p>
+   <p> <h4>The purpose of network scanning is as follows: </h4></p>
+<li>Recognize available UDP and TCP network services running on the targeted hosts.</li>
+<li>Recognize filtering systems between the user and the targeted hosts.</li>
+<li>Determine the operating systems (OSs) in use by assessing IP responses.</li>
+<h4>Network scanning consists of network port scanning as well as vulnerability scanning.</h4>
+<h4>1) Network port scanning: </h4>
+<p>Network port scanning refers to the method of sending data packets via the network to a computing system's specified service port numbers (for example, port 23 for Telnet, port 80 for HTTP and so on). This is to identify the available network services on that particular system. This procedure is effective for troubleshooting system issues or for tightening the system's security.
+</p>
+    <h4>2) Vulnerability scanning: </h4>
+<p>Vulnerability scanning is a method used to discover known vulnerabilities of computing systems available on a network. It helps to detect specific weak spots in an application software or the operating system (OS), which could be used to crash the system or compromise it for undesired purposes.
+</p>
+    <h3>NMap</h3>
+<li>Nmap (Network Mapper) is a free and open-source network scanner. Nmap is used to discover hosts and services on a computer network by sending packets and analyzing the responses. Nmap is used for exploring networks, perform security scans, network audit and finding open ports on remote machine. It scans for Live hosts, Operating systems, packet filters and open ports running on remote hosts.</li>
+<li>Nmap provides a number of features for probing computer networks, including host discovery and service and operating system detection.</li>
+<li>Nmap is used for exploring networks, perform security scans, network audit and finding open ports on remote machine. It scans for Live hosts, Operating systems, packet filters and open ports running on remote hosts.</li>
+<li>Nmap, short for Network Mapper, is a free security scanner that is commonly used to build pieces of software used within IT support roles. By searching for host machines and services, the software is able to construct a map of the network and the entities within it. This brings a range of benefits, including the ability to offer remote support to machines in different locations.
+    <li>Internal scan:</li>
+    <p>How many devices are ON in ur LAN?, IP addresses of all devices in our LAN, MAC address of all devices in ur LAN, Open Ports, Services running.</li>
+    
+
+<h3>Wireshark</h3>
+<li>Wireshark is the world’s most popular and widely-used network protocol analyzer. It let's us see what’s happening on our network at a microscopic level and  use at  many commercial and non-profit enterprises, government agencies, and educational institutions. 
+</li>
+<li>Wireshark is a free and open-source packet analyzer. It is used for network troubleshooting, analysis, software and communications protocol development, and education.</li>
+<h3>Splunk</h3>
+<li>It is a web-based tool. It does indexing (Saving ur Log file, Security files n some system files).</li>
+ <li>  Runs at localhost(127.0.0.1)  n on port number:8000 .
+    </li>
+
+<li>Splunk is a software platform to search, analyze and visualize the machine-generated data gathered from the websites, applications, sensors, devices etc. which make up our IT infrastructure and business.</li>
+<li>Splunk is a software platform widely used for monitoring, searching, analyzing the data. It performs capturing, indexing, and correlating the real time data in a searchable container and produces graphs, alerts, dashboards and visualizations. Splunk provides easy to access data over the whole organization for easy diagnostics and solutions to various business problems.</li>
+<li>Splunk reduces troubleshooting and resolving time by offering instant results.</li>
+<li>Splunk is available in three different versions are 1)Splunk Enterprise 2) Splunk Light 3) Splunk Cloud.</li>
+<li>The most important best practice of using Splunk is that we should use test index so we can quickly perform the test.</li>
+<li>The biggest drawback of Splunk is that it can prove expensive for large data volumes.</li>
+<hr>
+<section>
+<h3>Honeypot</h3>
+<p>
+    <p><li>A honeypot is a computer or computer system intended to mimic likely targets of cyberattacks. It can be used to detect attacks or deflect them from a legitimate target. It can also be used to gain information about how cybercriminals operate.
+    </li></p>
+<p><li>Honeypots can alert the security team when someone is poking around where they should not. While honeypots have been used widely by researchers to study the methods of attackers, they can be very useful to defenders as well.</li>
+</p>
+<p> <img src="./images/poot.png"></p>
+<h4>How it works ?</h4>
+<p>for instance, were in charge of IT security for a bank, you might set up a honeypot system that, to outsiders, looks like the bank’s network. The same goes for those in charge of — or researching — other types of secure, internet-connected systems.<br>
+
+    By monitoring traffic to such systems, we can better understand where cybercriminals are coming from, how they operate, and what they want. More importantly, we can determine which security measures we have in place are working — and which ones may need improvement.</p>
+    
+    <h4>Example: </h4>
+<p>In 2015, internet security experts set up an online railway control system as honeypot bait. The goal was to study how criminals would attack projects where they could put the public at risk. In this case, the only damage done was to a model train set at a German technology conference. Over two weeks, the so-called “HoneyTrain” suffered 2.7 million attacks.
+<p><img src="./"></p>/</p>
+    <h4>Types of honeypot:</h4>
+<h4>1) Low interaction honeypot:</h4>
+<p> Low-interaction honeypots are less resource-intensive and gather rudimentary information regarding the kind of threat and where it came from. These are relatively simple to set up, and they make use of Transmission Control Protocol (TCP), Internet Protocol (IP), and network services. However, there is nothing inside the honeypot to hold the attacker’s attention for a considerable amount of time.
+</p>
+    <h4>2) Medium interaction honeypot: </h4>
+<p>Mid-interaction honeypots imitate elements of the application layer, but they do not have an operating system. Their mission is to confuse an attacker or stall them so the organization has more time to ascertain how to react to the kind of attack in question.
+</p>
+    <h4>3) High interaction honeypot:</h4>
+<p>A high-interaction honeypot is designed to get attackers to invest as much time as possible inside the honeypot. This gives the security team more opportunities to observe the targets and intentions of the attacker and more chances to discover vulnerabilities within the system. 
+</p>
+<p>A high-interaction honeypot may have extra systems, databases, and processes that the attacker will want to try to infiltrate. Researchers can observe how the attacker goes about looking for information, as well as which information they prefer and how they attempt to escalate access privileges. And production type can use all three types of honeypot.</p>
+
+
+<h4>Conclusion:</h4>
+<p>Honeypot is a useful tool for luring and trapping attackers, capturing information. Security is the essential element of any
+organization web sites, but though the security provided by the honeypots based on hardware setups are very expensive for small
+and medium scaled organization; a software based honeypot may be proven as a very effective security solution for these
+organizations.</p>
+<p> Among all these types of Honeypot low-interaction Honeypot is the mostly used Honeypot, because it is easy to
+implement and manage. But the most secure and efficient Honeypot type is High-interaction Honeypot. These honeypots provide
+security as well as generates a log about all entries in the system which is very helpful to find the intrusive activity in the system.</p>
+<p>But the honeypot must need to upgrade to new methods and attacks at some interval of time to provide security against new type
+to attacks. It can’t be said as a solution but it is a good supplement for the security system.</p>
+</section>
+<hr>
+</p> 
+    </section>
+</section>
+        </SECTION>
+        </section>  
+        
+        </div>
+     <footer>
+       <h2 style="text-align: center;"> Created by- Ritika Guleria</h2>
+       <div class="social">
+       	<a class="social-icon-container" title="email" href="mailto:ritikaguleria95@gmail.com">
+					<svg class="social-icon" viewBox="0 0 64 64">
+						<path data-name="layer1" class="mail" d="M2 14.7v34.4l17.2-17.5L2 14.7zm42.8 16.9L62 49.1V14.7L44.8 31.6z"></path>
+						<path data-name="layer2" class="mail" d="M59.1 12H5l27 26.6L59.1 12z"></path>
+						<path data-name="layer1" class="mail" d="M32 44.2l-10-9.8L4.7 52h54.6L42 34.4l-10 9.8z"></path>
+					</svg>Mail
+				</a>
+				<a class="social-icon-container" title="LinkedIn" href="https://www.linkedin.com/in/ritika-guleria-4082b4190">
+					<svg class="social-icon" viewBox="0 0 128 128">
+						<path id="plain" class="linkedin" d="M116,3H12a8.91,8.91,0,0,0-9,8.8V116.22A8.91,8.91,0,0,0,12,125H116a8.93,8.93,0,0,0,9-8.81V11.77A8.93,8.93,0,0,0,116,3ZM39.17,107H21.06V48.73H39.17Zm-9-66.21a10.5,10.5,0,1,1,10.49-10.5A10.5,10.5,0,0,1,30.12,40.77ZM107,107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87,7.36-10.87,15V107H50.53V48.73H67.89v8h.24c2.42-4.58,8.32-9.41,17.13-9.41C103.6,47.28,107,59.35,107,75Z"></path>
+					</svg>Linkedin
+				</a>
+				<a class="social-icon-container" title="Github" href="https://github.com/RitikaGuleria">
+					<svg class="social-icon" viewBox="0 0 128 128">
+						<path class="github" fill-rule="evenodd" clip-rule="evenodd" d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"></path><path d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm-.743-.55M28.93 94.535c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zm-.575-.618M31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm0 0M34.573 101.373c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm0 0M39.073 103.324c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm0 0M44.016 103.685c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm0 0M48.614 102.903c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"></path>
+					</svg>Github
+				</a>
+				<a class="social-icon-container" title="Twitter" href="https://twitter.com/RitikaGuleria2?s=09">
+					<svg class="social-icon" viewBox="0 0 128 128">
+						<path id="original" class="twitter" d="M40.58,115.3c47.64,0,73.69-39.47,73.69-73.69,0-1.12,0-2.24-.07-3.35a52.7,52.7,0,0,0,12.92-13.41,51.7,51.7,0,0,1-14.87,4.08A26,26,0,0,0,123.63,14.6a51.9,51.9,0,0,1-16.45,6.29A25.92,25.92,0,0,0,63.05,44.51,73.53,73.53,0,0,1,9.67,17.45a25.92,25.92,0,0,0,8,34.58A25.71,25.71,0,0,1,6,48.78c0,.11,0,.22,0,.33A25.91,25.91,0,0,0,26.73,74.5a25.86,25.86,0,0,1-11.7.44,25.93,25.93,0,0,0,24.2,18A52,52,0,0,1,7.06,104a52.72,52.72,0,0,1-6.18-.36,73.32,73.32,0,0,0,39.7,11.63" transform="translate(-0.88 -12.7)"></path>
+					</svg>Twitter
+				</a>
+			</div>
+     </footer>
+   </body>
+
+</html>
